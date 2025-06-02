@@ -79,8 +79,8 @@ async def embed(
 
 @router.post("/search", response_model=SearchResponse)
 async def search(
-    request: SearchRequest, model: 
-    SentenceEmbeddingModel = Depends(get_model),
+    request: SearchRequest,
+    model: SentenceEmbeddingModel = Depends(get_model),
     index: faiss.Index = Depends(get_faiss_index)
 ):
     """
