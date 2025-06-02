@@ -8,6 +8,11 @@ from model import SentenceEmbeddingModel
 from routes import router
 from storage import FaissIndex
 
+import os
+
+# Set environment variables to control threading behavior for arm (mac) architecture
+os.environ["OMP_NUM_THREADS"] = "1"
+
 # Configure the root logger
 logging.basicConfig(
     level=logging.INFO,
