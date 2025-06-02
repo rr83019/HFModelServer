@@ -30,4 +30,4 @@ COPY . .
 EXPOSE 8000
 
 # Run the application using python directly
-CMD ["python", "main.py"]
+CMD ["python", "src/main.py"]
